@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flashcard App (Static Deck)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="app-header">
+      <h1>Flashcard Study Deck</h1>
+      <p class="subtitle">Click the card to reveal the answer</p>
+    </header>
+
+    <!-- Progress Indicator -->
+    <section class="progress-section">
+      <div class="progress-bar-container">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+      <span id="progress-text" class="progress-text">Card 1 of 10</span>
+    </section>
+
+    <!-- Flashcard 3D Scene -->
+    <section class="flashcard-scene" aria-label="Flashcard">
+      <div id="flashcard" class="flashcard" role="button" tabindex="0" aria-label="Flashcard, click to flip">
+        <div class="flashcard-face flashcard-front">
+          <span class="badge">Question</span>
+          <p id="card-question" class="card-text">Loading question...</p>
+          <span class="hint-text">💡 Tap to flip</span>
+        </div>
+        <div class="flashcard-face flashcard-back">
+          <span class="badge">Answer</span>
+          <p id="card-answer" class="card-text">Loading answer...</p>
+          <span class="hint-text">💡 Tap to flip back</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation Controls -->
+    <section class="controls">
+      <button id="prev-btn" class="btn" aria-label="Previous Card">
+        &larr; Previous
+      </button>
+      <button id="flip-btn" class="btn btn-secondary" aria-label="Flip Card">
+        Flip
+      </button>
+      <button id="next-btn" class="btn" aria-label="Next Card">
+        Next &rarr;
+      </button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
